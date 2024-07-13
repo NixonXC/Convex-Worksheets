@@ -41,7 +41,7 @@ def generate():
     response = get_data(grade, user_input, diff, no_of_questions, header)
     pdf_filename = conversion.create_pdf(
     header=header,
-    description="Artifically Generated worksheets and sample papers for mathematics. Project by Atharva Kulkarni.",
+    description="Artifically Generated worksheets and sample papers for mathematics.",
     data=response[0],
     user_input=response[1],
     grade=response[2],
