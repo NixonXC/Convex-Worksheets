@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convex Worksheets by Atharva Kulkarni</title>
-    <meta name="description" content="Generate mathematics worksheets with the help of AI!">
+    <meta name="description" content="Generate mathematics worksheets with the help of AI. Project by Atharva Kulkarni">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <div class="navbar" style="text-align: center;">
+        <a href="/">Worksheets</a> |
+        <a href="https://pdf-core.vercel.app">Book PDFs</a> |
+        <a href="https://github.com/NixonXC/Convex-Worksheets">GitHub</a>
+    </div>
     <div class="main">
-        <h1>Convex</h1>
+        <h1>Convex<span style="color: #37EBC0;">Core</span></h1>
         <p style="text-align: center;">Generate Mathematics Worksheets with the help of AI!</p>
         <form action="{{ url_for('generate') }}" method="POST">
             <p>Your Grade/Class</p>
             <select name="grade" required>
                 <option value="10">10th</option>
+                <option value="12">12th</option>
+                <option value="11">11th</option>
                 <option value="9">9th</option>
                 <option value="8">8th</option>
                 <option value="7">7th</option>
@@ -35,6 +42,6 @@
             <input type="text" name="header" placeholder="For ex. XYZ Institue" required>
             <button type="submit">Generate Worksheet</button>
         </form>
-        </div>
+    </div>
 </body>
 </html>
