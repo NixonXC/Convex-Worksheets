@@ -19,10 +19,8 @@ def create_pdf(header, description, data, no_of_questions, grade, user_input, di
     pdf.add_page()
     pdf.set_margins(20, 30, 20)
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    font_path = os.path.join(current_dir, 'fonts', 'DejaVuSans.ttf')
-    pdf.add_font('DejaVu', '', font_path, uni=True)
-    bold_font_path = os.path.join(current_dir, 'fonts', 'DejaVuSans-Bold.ttf')
-    pdf.add_font('DejaVu', 'B', bold_font_path, uni=True)
+    pdf.add_font('DejaVu', '', 'DejaVuSans.ttf', uni=True)
+    pdf.add_font('DejaVu', 'B', 'DejaVuSans-Bold.ttf', uni=True)
 
     # Font for the header
     pdf.set_font('DejaVu', 'B', 26)
