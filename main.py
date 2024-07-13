@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-genai.configure(api_key="")
+genai.configure(api_key=os.getenv("KEY"))
 
 generation_config = {
         "temperature": 1,
