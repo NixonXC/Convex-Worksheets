@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convex Worksheets by Atharva Kulkarni</title>
+    <meta name="description" content="Generate mathematics worksheets with the help of AI!">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Convex</h1>
+        <p style="text-align: center;">Generate Mathematics Worksheets with the help of AI!</p>
+        <form action="{{ url_for('generate') }}" method="POST">
+            <p>Your Grade/Class</p>
+            <select name="grade" required>
+                <option value="10">10th</option>
+                <option value="9">9th</option>
+                <option value="8">8th</option>
+                <option value="7">7th</option>
+                <option value="6">6th</option>
+                <option value="5">5th</option>
+            </select>
+            <p>Chapter Name</p>
+            <input type="text" name="chapter" placeholder="Enter Chapter Name" required>
+            <p>Worksheet Difficulty</p>
+            <select name="difficulty" required>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <p>Number of Questions</p>
+            <input type="number" name="num_questions" placeholder="Enter the number of questions" min="1" max="40" onchange="this.value = Math.floor(Math.max(this.value,1))" required>
+            <p>Enter PDF Header/Title</p>
+            <input type="text" name="header" placeholder="For ex. XYZ Institue" required>
+            <button type="submit">Generate Worksheet</button>
+        </form>
+        </div>
+</body>
+</html>

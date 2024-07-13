@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background-color: #030A09 !important;
+    color: white;
+}
+.main {
+    text-align: left;
+    font-family: 'Popins', sans-serif;
+    border: 2px solid rgba(175, 239, 207, 0.234);
+    border-radius: 12px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3em;
+    margin-top: 3%;
+}
+.main h1 {
+    font-size: 5em;
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Inter', sans-serif;
+}
+.main p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+.main option {
+    font-family: 'Poppins', sans-serif;
+    padding: 2em;
+    font-size: 1.2em;
+    display: flex;
+    color: white;
+}
+.main select {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: white;
+    width: 5vw;
+    margin-left: 2vw;
+    outline: none;
+    border: none;
+    background-color: #1b443e;
+    border-radius: 4px;
+    text-align: center;
+}
+.main input {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: white;
+    margin-left: 2vw;
+    outline: none;
+    width: 12vw;
+    border: none;
+    background-color: #1b443e;
+    border-radius: 4px;
+}
+::placeholder {
+    color: white;
+}
+.main button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left: 2vw;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    border: none;;
+    background-color: #9EE0D5;
+    border-radius: 4px;
+}
+.main button:hover {
+    box-shadow: 0 0 30px #e1e1e37a;
+}
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    .main h1 {
+        margin-top: 7vh;
+        font-size: 3em;
+    }
+
+
+    .main p {
+        font-size: 1.2em;
+    }
+
+    .main select, .main input, .main button {
+        font-size: 1.2em;
+        margin-left: 5vw;
+        text-align: center;
+        width: 60vw;
+    }
+    .main button {
+        margin-top: 3vh;
+    }
+}
