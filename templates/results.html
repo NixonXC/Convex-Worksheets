@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFCore | Search</title>
+    <link rel="stylesheet" href="/static/results.css">
+    <link rel="shortcut icon" href="/static/transparent.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="refs">
+            <a href="/">Worksheets</a>
+            <a href="/books">Book PDFs</a>
+            <a href="/methodcore">E-Notes/Formula Sheets</a>
+            <a href="https://github.com/NixonXC/Convex-Worksheets">Github</a>
+        </div>
+        <button class="try-api-button" onclick="window.location.href='https://pdf-scout.vercel.app/'">Try API</button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div class="main">
+        <h1>Search Results</h1>
+        <p>These are the top search results for your query:</p>
+        {% for result in results %}
+            {% if 'pdf_url' in result %}
+            <div class="result">
+                <p>{{ result['pdf_name'] }}</p>
+                <a href="{{ result['pdf_url'] }}"><button>Download</button></a>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -119,13 +119,19 @@ body {
         font-size: 1.2em;
     }
 
-    .main select, .main input, .main button {
+    .main input, .main button {
         font-size: 1.2em;
         margin-left: 5vw;
         text-align: center;
         width: 60vw;
     }
+    .main select {
+        width: 50%;
+    }
     .main button {
         margin-top: 3vh;
+    }
+    #sub {
+        width: 50% !important;
     }
 }

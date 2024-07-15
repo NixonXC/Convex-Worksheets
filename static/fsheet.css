@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+body {
+    margin: 0;
+    background-color: #060F0D;
+    color: white !important;
+}
+
+.navbar {
+    display: flex;
+    font-family: 'Poppins';
+    align-items: center;
+    margin-top: 1%;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.1em;
+    transition: 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+.refs {
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.try-api-button {
+    background-color: #8ADDC9;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    margin-left: auto;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    width: 8%;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    -webkit-box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+    -moz-box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+    box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+}
+
+.navbar a:hover {
+    color: rgb(208, 208, 208);
+}
+
+.navbar .icon {
+    display: none;
+}
+.main {
+    text-align: left;
+    font-family: 'Popins', sans-serif;
+    border: 2px solid rgba(175, 239, 207, 0.234);
+    border-radius: 12px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3em;
+    margin-top: 3%;
+}
+.main h1 {
+    font-size: 5em;
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Inter', sans-serif;
+}
+.main p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+.main option {
+    font-family: 'Poppins', sans-serif;
+    padding: 2em;
+    font-size: 1.2em;
+    display: flex;
+    color: white;
+}
+.main select {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: white;
+    width: 5vw;
+    margin-left: 2vw;
+    outline: none;
+    border: none;
+    background-color: #0f2722;
+    border-radius: 4px;
+    text-align: center;
+}
+.main input {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: white;
+    margin-left: 2vw;
+    outline: none;
+    width: 12vw;
+    border: none;
+    background-color: #0f2722;
+    border-radius: 8px;
+}
+::placeholder {
+    color: white;
+}
+.main button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.2em;
+    display: inline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left: 2vw;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    border: none;
+    background-color: #9EE0D5;
+    border-radius: 8px;
+}
+.main button:hover {
+    box-shadow: 0 0 30px #e1e1e37a;
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .try-api-button {
+        display: none;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

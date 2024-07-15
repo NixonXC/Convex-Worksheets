@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+body {
+    margin: 0;
+    background-color: #060F0D;
+}
+
+.navbar {
+    display: flex;
+    font-family: 'Poppins';
+    align-items: center;
+    margin-top: 1%;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.1em;
+    transition: 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+.refs {
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.try-api-button {
+    background-color: #8ADDC9;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    margin-left: auto;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    width: 8%;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    -webkit-box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+    -moz-box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+    box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
+}
+
+.navbar a:hover {
+    color: rgb(208, 208, 208);
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.main {
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    margin-top: 5%;
+}
+
+.main h1 {
+    font-size: 3.5em;
+    font-family: 'Inter';
+}
+
+.main p {
+    font-size: 1.3em;
+    font-family: 'Montserrat';
+    line-height: 30px;
+    margin-top: -1%;
+}
+
+.main input {
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Montserrat';
+    outline: none;
+    background-color: #0f2722;
+}
+
+::placeholder {
+    color: rgb(215, 214, 214);
+}
+
+.main select {
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-left: 5px;
+    font-family: 'Montserrat';
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    width: 160px;
+    border-right: 10px solid transparent;
+    border-radius: 8px;
+    background-color: #0f2722;
+    padding: 1em;
+}
+.main option {
+    border: none;
+}
+.main button {
+    margin-top: 1%;
+    padding: 0.8em;
+    border-radius: 8px;
+    margin-right: auto;
+    width: 150px;
+    cursor: pointer;
+    margin-left: 1%;
+    display: inline;
+    background-color: #8ADDC9;
+    border: none;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    font-family: 'Montserrat';
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .try-api-button {
+        display: none;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .main {
+        margin-left: 10%;
+        text-align: left;
+    }
+    .main p {
+        max-width: 350px;
+        text-align: left;
+    }
+    .main select {
+        margin-top: 10px;
+        margin-left: 10%;
+        margin-left: 0;
+    }
+    .main button {
+        margin-top: 5%;
+        display: block;
+        border-radius: 4px;
+    }
+}

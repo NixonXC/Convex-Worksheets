@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFCore</title>
+    <link rel="stylesheet" href="/static/PDF.css">
+    <link rel="shortcut icon" href="/static/transparent.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="refs">
+            <a href="/">Worksheets</a>
+            <a href="/books">Book PDFs</a>
+            <a href="/methodcore">E-Notes/Formula Sheets</a>
+            <a href="https://github.com/NixonXC/Convex-Worksheets">Github</a>
+        </div>
+        <button class="try-api-button" onclick="window.location.href='https://pdf-scout.vercel.app/'">Try API</button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </a>
+    </div>
+    
+
+    <div class="main">
+        <h1>PDF<span style="color: #37EBC0;">Core</span></h1>
+        <p>Explore Archive.org and Google.com to find PDFs, books, and other resources!</p>
+        <form action="/search" autocomplete="off" method="post">
+            <input type="text" id="pdf_name" name="pdf_name" placeholder="Enter PDF Name" required>
+            <select id="engine" name="engine" required>
+                <option value="google">Google</option>
+                <option value="archive">Archive.org</option>
+                <option value="anna">Anna's Archive</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>
