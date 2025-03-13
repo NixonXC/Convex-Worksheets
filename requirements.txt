@@ -3,3 +3,4 @@ google-generativeai
 fpdf
 bs4
 serpapi
+google-search-results
