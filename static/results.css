@@ -14,7 +14,7 @@
 }
 body {
     margin: 0;
-    background-color: #060F0D;
+    background-color: #02090b;
 }
 
 .navbar {
@@ -39,7 +39,7 @@ body {
 }
 
 .try-api-button {
-    background-color: #8ADDC9;
+    background-color: #92d4ea;
     color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
@@ -59,8 +59,8 @@ body {
 
 .main {
     border: none;
-    background-color: #0f2722;
-    width: 30%;
+    border: 1px solid rgba(12, 119, 146, 0.234);
+    background-color: #010607d7;    width: 30%;
     border-radius: 12px;
     text-align: left;
     padding: 2em;
@@ -85,7 +85,7 @@ body {
     border-radius: 2px;
     margin-left: auto;
     cursor: pointer;
-    background-color: hsl(166, 55%, 70%);
+    background-color: #92d4ea;
     border: none;
     margin-top: 5%;
     display: block;

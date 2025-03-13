@@ -3,54 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convex Worksheets by Atharva Kulkarni</title>
+    <title>Convex Worksheets</title>
     <meta name="description" content="Generate mathematics worksheets with the help of AI. Project by Atharva Kulkarni">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="navbar" style="text-align: center;">
-        <a href="/">Worksheets</a> |
-        <a href="/books">Book PDFs</a> |
-        <a href="/methodcore">E-Notes/Formula Sheets</a> |
-        <a href="https://github.com/NixonXC/Convex-Worksheets">GitHub</a>
+    <div class="navbar" id="myNavbar">
+        <div class="refs">
+            <a href="/">Worksheets</a>
+            <a href="/books">Book PDFs</a>
+            <a href="/methodcore">E-Notes/Formula Sheets</a>
+            <a href="https://github.com/NixonXC/Convex-Worksheets">Github</a>
+        </div>
+        <button class="try-api-button" onclick="window.location.href='https://pdf-scout.vercel.app/'">Try API</button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </a>
     </div>
+    
     <div class="main">
-        <h1>Convex<span style="color: #37EBC0;">Core</span></h1>
-        <p style="text-align: center;">Generate CBSE Worksheets with the help of AI!</p>
-        <form action="{{ url_for('generate') }}" method="POST">
-            <p>Your Grade/Class</p>
-            <select name="grade" required>
-                <option value="10">10th</option>
-                <option value="12">12th</option>
-                <option value="11">11th</option>
-                <option value="9">9th</option>
-                <option value="8">8th</option>
-                <option value="7">7th</option>
-                <option value="6">6th</option>
-                <option value="5">5th</option>
-            </select>
-            <p>Subject</p>
-            <select name="subject" required style="width: 20%;" id="sub">
-                <option value="Mathematics">Mathematics</option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Biology">Biology</option>
-                <option value="English">English</option>
-            </select>
-            <p>Chapter Name</p>
-            <input type="text" name="chapter" placeholder="Enter Chapter Name" required>
-            <p>Worksheet Difficulty</p>
-            <select name="difficulty" required>
-                <option value="Easy">Easy</option>
-                <option value="Medium">Medium</option>
-                <option value="Hard">Hard</option>
-            </select>
-            <p>Number of Questions</p>
-            <input type="number" name="num_questions" placeholder="Enter the number of questions" min="1" max="40" onchange="this.value = Math.floor(Math.max(this.value,1))" required>
-            <p>Enter PDF Header/Title</p>
-            <input type="text" name="header" placeholder="For ex. XYZ Institue" required>
+        <h1>Convex<span style="color: aqua;">Core</span></h1>
+        <p>Generate CBSE Worksheets with the help of AI!</p>
+        
+        <form action="{{ url_for('generate') }}" method="POST" class="inline-form">
+            <div class="form-row">
+                <label for="grade">Your Grade/Class:</label>
+                <select name="grade" required>
+                    <option value="10">10th</option>
+                    <option value="12">12th</option>
+                    <option value="11">11th</option>
+                    <option value="9">9th</option>
+                    <option value="8">8th</option>
+                    <option value="7">7th</option>
+                    <option value="6">6th</option>
+                    <option value="5">5th</option>
+                </select>
+            
+                <label for="sub">Subject:</label>
+                <select name="subject" required id="sub">
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="chapter">Chapter Name:</label>
+                <input type="text" name="chapter" placeholder="Enter Chapter Name" required>
+
+                <label for="difficulty">Worksheet Difficulty:</label>
+                <select name="difficulty" required>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="num_questions">Number of Questions:</label>
+                <input type="number" name="num_questions" placeholder="Enter the number of questions" min="1" max="40" required>
+
+                <label for="header">Enter PDF Header/Title:</label>
+                <input type="text" name="header" placeholder="For ex. XYZ Institute" required>
+            </div>
+
             <button type="submit">Generate Worksheet</button>
         </form>
     </div>
+    
+    <script src="/static/script.js"></script>
 </body>
 </html>

@@ -1,137 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap');
+
 body {
-    background-color: #060F0D !important;
-    color: white;
+    margin: 0;
+    background-color: #02090b;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
 }
-.main {
-    text-align: left;
-    font-family: 'Popins', sans-serif;
-    border: 2px solid rgba(175, 239, 207, 0.234);
-    border-radius: 12px;
-    width: 40%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 3em;
-    margin-top: 3%;
-}
-.main h1 {
-    font-size: 5em;
-    text-align: center;
-    line-height: 20px;
-    font-family: 'Inter', sans-serif;
-}
-.main p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
-}
-.main option {
-    font-family: 'Poppins', sans-serif;
-    padding: 2em;
-    font-size: 1.2em;
-    display: flex;
-    color: white;
-}
-.main select {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
-    font-size: 1.2em;
-    display: inline;
-    cursor: pointer;
-    color: white;
-    width: 5vw;
-    margin-left: 2vw;
-    outline: none;
-    border: none;
-    background-color: #0f2722;
-    border-radius: 4px;
-    text-align: center;
-}
-.main input {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
-    font-size: 1.2em;
-    display: inline;
-    cursor: pointer;
-    color: white;
-    margin-left: 2vw;
-    outline: none;
-    width: 12vw;
-    border: none;
-    background-color: #0f2722;
-    border-radius: 8px;
-}
-::placeholder {
-    color: white;
-}
-.main button {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: 1.2em;
-    display: inline;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    margin-left: 2vw;
-    outline: none;
-    transition: 0.3s ease-in-out;
-    border: none;
-    background-color: #9EE0D5;
-    border-radius: 8px;
-}
-.main button:hover {
-    box-shadow: 0 0 30px #e1e1e37a;
-}
+
+/* Navbar */
 .navbar {
+    display: flex;
+    font-family: 'Poppins';
+    align-items: center;
     margin-top: 1%;
 }
+
 .navbar a {
-    margin: 20px 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.1em;
     transition: 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+.refs {
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.try-api-button {
+    background-color: #92d4ea;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-left: auto;
+    transition: 0.3s ease-in-out;
+    width: 8%;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: -6px 5px 43px 0px rgba(55, 235, 192, 1);
 }
 
 .navbar a:hover {
-    text-shadow: 0px 0px 10px #ffffff; /* Adds a white text shadow on hover */
-    /* For a greenish shadow, you can use: text-shadow: 0px 0px 10px #00ff00; */
+    color: rgb(208, 208, 208);
 }
-@media only screen and (max-width: 768px) {
+
+.navbar .icon {
+    display: none;
+}
+
+/* Main Section */
+.main {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(12, 119, 146, 0.234);
+    background-color: #010607d7;
+    border-radius: 4px;
+    width: 60vw !important;
+    margin: 6% auto;
+    padding-bottom: 3em;
+}
+
+.main h1 {
+    font-size: 3.2em;
+    text-align: left;
+    font-weight: 900;
+    margin-left: 2vw;
+    letter-spacing: 3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.main p {
+    margin-left: 2vw;
+    max-width: 90%;
+    font-size: 1em;
+}
+
+.main option {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
+    font-size: 1em;
+    background-color: #02090b;
+    color: white;
+}
+
+/* Form Layout */
+.inline-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-row {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.form-row label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+    margin-left: 2vw;
+    white-space: nowrap;
+}
+
+.form-row select, 
+.form-row input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4em;
+    font-size: 1em;
+    color: white;
+    background-color: #041114d5;
+    border: 1px solid rgba(12, 119, 146, 0.234);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-row select {
+    width: 7vw;
+    text-align: center;
+}
+
+.form-row input {
+    width: 12vw;
+}
+
+::placeholder {
+    color: white;
+}
+
+.main button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    color: black;
+    background-color: #92d4ea;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    border: none;
+    margin-left: 2vw;
+}
+
+.main button:hover {
+    box-shadow: 0 0 30px #e1e1e37a;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+
+    .try-api-button {
+        display: none;
+    }
+
     .main {
-        width: 90%;
-        margin-top: 20%;
-        text-align: center;
+        width: 90% !important;
     }
 
     .main h1 {
-        margin-top: 7vh;
-        font-size: 3em;
+        text-align: left;
+        margin-left: 5vw;
+        font-size: 2.5em;
     }
-
 
     .main p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin-left: 5vw;
     }
 
-    .main input, .main button {
-        font-size: 1.2em;
+    .form-row {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .form-row label {
         margin-left: 5vw;
-        text-align: center;
-        width: 60vw;
+        margin-top: 3em;
     }
-    .main select {
-        width: 50%;
+
+    .form-row select, 
+    .form-row input {
+        margin-bottom: 0.8em;
+        width: 70% !important;
+        font-size: 1em;
+        margin-left: 5vw;
+        margin-top: 0.5em;
     }
+    .form-row select {
+        width: 40% !important;
+    }
+
     .main button {
-        margin-top: 3vh;
+        margin-left: 5vw;
+        margin-top: 0.5em;
+        padding: 0.5em;
+        font-size: 1em;
     }
-    #sub {
-        width: 50% !important;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 }

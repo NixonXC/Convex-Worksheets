@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula Sheets</title>
     <link rel="stylesheet" href="/static/fsheet.css">
 </head>
+
 <body>
     <div class="navbar" id="myNavbar">
         <div class="refs">
@@ -17,44 +19,53 @@
         <button class="try-api-button" onclick="window.location.href='https://pdf-scout.vercel.app/'">Try API</button>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <svg width="24" height="24" viewBox="0 0 24 24">
-                <path fill="#ffffff" d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+                <path fill="#ffffff" d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
             </svg>
         </a>
     </div>
     <div class="main">
-        <h1>Method<span style="color: #37EBC0;">Core</span></h1>
+        <h1>Method<span style="color: aqua;">Core</span></h1>
         <p>Generate formula sheets or e-notes for any subject! Reference from NCERT.</p>
-        <form action="/gen_sheet" autocomplete="off" method="post">
-            <p>What do you want to Generate?</p>
-            <select name="type" id="type">
-                <option value="sheet">Formula Sheet</option>
-                <option value="note">E-Notes</option>
-            </select>
-            <p>Your Grade/Class</p>
-            <select name="grade" required>
-                <option value="10">10th</option>
-                <option value="12">12th</option>
-                <option value="11">11th</option>
-                <option value="9">9th</option>
-                <option value="8">8th</option>
-                <option value="7">7th</option>
-                <option value="6">6th</option>
-                <option value="5">5th</option>
-            </select>
-            <p>Subject</p>
-            <select name="subject" required style="width: 20%;" id="sub">
-                <option value="Mathematics">Mathematics</option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Biology">Biology</option>
-                <option value="English">English</option>
-            </select>
-            <p>Chapter Name</p>
-            <input type="text" name="chapter" placeholder="Enter Chapter Name" required>
-            <p>Enter PDF Header/Title</p>
-            <input type="text" name="header" placeholder="For ex. XYZ Institue" required>
+        <form action="/gen_sheet" autocomplete="off" method="post" class="inline-form">
+            <div class="form-row">
+                <label for="type">What do you want to Generate: </label>
+                <select name="type" id="type">
+                    <option value="sheet">Formula Sheet</option>
+                    <option value="note">E-Notes</option>
+                </select>
+                <label for="grade">Your Grade/Class: </label>
+                <select name="grade" required>
+                    <option value="10">10th</option>
+                    <option value="12">12th</option>
+                    <option value="11">11th</option>
+                    <option value="9">9th</option>
+                    <option value="8">8th</option>
+                    <option value="7">7th</option>
+                    <option value="6">6th</option>
+                    <option value="5">5th</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="sub">Subject: </label>
+                <select name="subject" required id="sub">
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="English">English</option>
+                </select>
+                <label for="chapter">Chapter Name: </label>
+                <input type="text" name="chapter" placeholder="Enter Chapter Name" required>
+            </div>
+            <div class="form-row">
+                <label for="header">Enter PDF Header/Title: </label>
+                <input type="text" name="header" placeholder="For ex. XYZ Institute" required>
+            </div>
             <button type="submit">Generate Sheet</button>
         </form>
     </div>
+    <script src="/static/script.js"></script>
+
 </body>
+
 </html>

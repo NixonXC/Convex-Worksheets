@@ -26,7 +26,7 @@
     
 
     <div class="main">
-        <h1>PDF<span style="color: #37EBC0;">Core</span></h1>
+        <h1>PDF<span style="color: aqua;">Core</span></h1>
         <p>Explore Archive.org and Google.com to find PDFs, books, and other resources!</p>
         <form action="/search" autocomplete="off" method="post">
             <input type="text" id="pdf_name" name="pdf_name" placeholder="Enter PDF Name" required>
@@ -38,15 +38,6 @@
             <button type="submit">Search</button>
         </form>
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myNavbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-    </script>
+    <script src="/static/script.js"></script>
 </body>
 </html>

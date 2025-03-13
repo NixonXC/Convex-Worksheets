@@ -7,6 +7,9 @@ from serpapi import GoogleSearch
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from bs4 import BeautifulSoup, Comment # type: ignore
 from serpapi import GoogleSearch
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 

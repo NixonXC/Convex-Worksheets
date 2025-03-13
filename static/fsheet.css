@@ -3,7 +3,7 @@
 
 body {
     margin: 0;
-    background-color: #060F0D;
+    background-color: #02090b;
     color: white !important;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .try-api-button {
-    background-color: #8ADDC9;
+    background-color: #92d4ea;
     color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
@@ -62,73 +62,91 @@ button:hover {
 }
 .main {
     text-align: left;
-    font-family: 'Popins', sans-serif;
-    border: 2px solid rgba(175, 239, 207, 0.234);
-    border-radius: 12px;
-    width: 40%;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(12, 119, 146, 0.234);
+    background-color: #010607d7;
+    border-radius: 4px;
+    width: 55vw !important;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 3em;
-    margin-top: 3%;
+    margin-top: 6%;
+}
+.main .inline-1 {
+    display: flex;
+    justify-content: space-between;
 }
 .main h1 {
-    font-size: 5em;
-    text-align: center;
-    line-height: 20px;
+    font-size: 3.2em;
+    text-align: left;
+    font-weight: 900;
+    margin-left: 2vw;
+    letter-spacing: 3px;
     font-family: 'Inter', sans-serif;
 }
 .main p {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 2vw;
     max-width: 90%;
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 .main option {
-    font-family: 'Poppins', sans-serif;
-    padding: 2em;
-    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
+    font-size: 1em;
     display: flex;
+    background-color: #02090b;
     color: white;
 }
+.main label {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.1em;
+    font-size: 1em;
+    display: inline;
+    cursor: pointer;
+    color: white;
+    margin-left: 2vw;
+}
 .main select {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
-    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4em;
+    font-size: 1em;
     display: inline;
     cursor: pointer;
     color: white;
     width: 5vw;
-    margin-left: 2vw;
+    margin-left: 0.2vw;
     outline: none;
     border: none;
-    background-color: #0f2722;
+    background-color: #041114d5;
+    border: 1px solid rgba(12, 119, 146, 0.234);
     border-radius: 4px;
     text-align: center;
 }
 .main input {
-    font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
-    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.4em;
+    font-size: 1em;
     display: inline;
     cursor: pointer;
     color: white;
-    margin-left: 2vw;
+    margin-left: 0.2vw;
     outline: none;
     width: 12vw;
     border: none;
-    background-color: #0f2722;
-    border-radius: 8px;
+    background-color: #041114d5;
+    border: 1px solid rgba(12, 119, 146, 0.234);
+    border-radius: 4px;
 }
 ::placeholder {
     color: white;
 }
 .main button {
     font-family: 'Poppins', sans-serif;
-    padding: 0.5em;
+    padding: 0.4em;
     padding-left: 1em;
     padding-right: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     display: inline;
     cursor: pointer;
     color: rgb(0, 0, 0);
@@ -136,11 +154,33 @@ button:hover {
     outline: none;
     transition: 0.3s ease-in-out;
     border: none;
-    background-color: #9EE0D5;
-    border-radius: 8px;
+    background-color: #92d4ea;
+    border-radius: 4px;
 }
 .main button:hover {
     box-shadow: 0 0 30px #e1e1e37a;
+}
+.inline-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-row {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.form-row label {
+    white-space: nowrap;
+}
+.form-row select, .form-row input {
+    flex: 1;
+    min-width: 150px;
+}
+.form-row:last-child {
+    display: flex;
+    align-items: center;
 }
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {
@@ -150,6 +190,51 @@ button:hover {
     .navbar a.icon {
         float: right;
         display: block;
+    }
+    .inline-form {
+        display: block;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-row {
+        display: block;
+        margin-bottom: 1em;
+    }
+    .main h1 {
+        text-align: left;
+        margin-left: 5vw;
+        font-size: 2em;
+    }
+    .main {
+        width: 80% !important;
+    }
+    .main p {
+        font-size: 0.8em;
+        margin-left: 5vw;
+    }
+    .main label {
+        margin-top: 2em;
+        margin-left: 5vw;
+    }
+    .main select {
+        width: 50% !important;
+        font-size: 0.8em;
+        margin-left: 5vw !important;
+        margin-top: 0.5em;
+        margin-bottom: 0.6em;
+    }
+    .main input {
+        margin-left: 5vw;
+        margin-top: 0.5em;
+        padding: 0.5em;
+        width: 70% !important;
+        font-size: 0.8em;
+    }
+    .main button {
+        margin-left: 5vw;
+        margin-top: 0.5em;
+        padding: 0.5em;
+        font-size: 0.8em;
     }
 }
 

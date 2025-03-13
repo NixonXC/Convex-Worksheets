@@ -3,7 +3,7 @@
 
 body {
     margin: 0;
-    background-color: #060F0D;
+    background-color: #02090b;
 }
 
 .navbar {
@@ -28,7 +28,7 @@ body {
 }
 
 .try-api-button {
-    background-color: #8ADDC9;
+    background-color: #92d4ea;
     color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
@@ -89,7 +89,8 @@ button:hover {
     font-size: 1em;
     font-family: 'Montserrat';
     outline: none;
-    background-color: #0f2722;
+    background-color: #041114d5;
+    border: 1px solid rgba(12, 119, 146, 0.234);
 }
 
 ::placeholder {
@@ -106,9 +107,9 @@ button:hover {
     appearance: button;
     outline: none;
     width: 160px;
-    border-right: 10px solid transparent;
     border-radius: 8px;
-    background-color: #0f2722;
+    background-color: #041114d5;
+    border: 1px solid rgba(12, 119, 146, 0.234);
     padding: 1em;
 }
 .main option {
@@ -123,7 +124,7 @@ button:hover {
     cursor: pointer;
     margin-left: 1%;
     display: inline;
-    background-color: #8ADDC9;
+    background-color: #92d4ea;
     border: none;
     transition: 0.3s ease-in-out;
     -webkit-transition: 0.3s ease-in-out;
