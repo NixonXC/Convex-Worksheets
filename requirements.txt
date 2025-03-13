@@ -2,3 +2,4 @@ flask
 google-generativeai
 fpdf
 bs4
+serpapi

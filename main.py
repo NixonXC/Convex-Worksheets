@@ -1,11 +1,12 @@
-import flask
 from flask import Flask, request, render_template, redirect, url_for, send_file, after_this_request
 import google.generativeai as genai
 import conversion as conversion
 import requests
 import os
+from serpapi import GoogleSearch
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from bs4 import BeautifulSoup, Comment # type: ignore
+from serpapi import GoogleSearch
 
 app = Flask(__name__)
 
@@ -135,20 +136,29 @@ class Annas_Archive_Parser():
         return final_links
 
 def fetch_pdf_links_google(query):
-    base_url = f"https://www.google.com/search?q={query}&num=3&as_filetype=pdf"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    params = {
+        "engine": "google",
+        "q": query + " filetype:pdf",
+        "api_key": os.getenv("SERP-KEY")
     }
 
-    response = requests.get(base_url, headers=headers)
+    search = GoogleSearch(params).get_dict()
+    results = []
+    titles = []
 
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        pdf_links = [a['href'] for a in soup.find_all('a', href=True) if '.pdf' in a['href']][:5]
-        return pdf_links
-    else:
-        print(f"Error: Unable to fetch Google search results. Status code: {response.status}")
-        return ["/"]
+    if "organic_results" in search:
+        for res in search["organic_results"]:
+            if "link" in res and res["link"].endswith(".pdf"):
+                results.append(res["link"])
+            if "title" in res:
+                titles.append(res["title"] + "\n - " + res["source"])
+    collection = []
+    for i in range(len(results)):
+        collection.append({
+            'pdf_name': str(i+1) + ". " + titles[i],
+            'pdf_url': results[i]
+        })
+    return collection[:5] if collection else ["/"]
 
 def search_archive_org(book_title):
     base_url = "https://archive.org/advancedsearch.php"
@@ -214,11 +224,11 @@ def search():
     results = []
 
     if engine == "google":
-        pdf_links = fetch_pdf_links_google(query=pdf_name)
-        for pdf_link in pdf_links:
-            filename = os.path.basename(pdf_link)
-            # Append each result to the results list
-            results.append({'pdf_name': filename, 'pdf_url': pdf_link})
+        data = fetch_pdf_links_google(query=pdf_name)
+        for pdf_link in data:
+            print(pdf_link)
+            filename = pdf_link["pdf_name"]
+            results.append({'pdf_name': filename, 'pdf_url': pdf_link["pdf_url"]})
     elif engine == "archive":
         archive_results = search_archive_org(book_title=pdf_name)
         results = [{'pdf_name': result['title'], 'pdf_url': result['url']} for result in archive_results]
