@@ -4,4 +4,3 @@ fpdf
 bs4
 serpapi
 google-search-results
-python3-dotenv
